@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Paleta nórdica */
+    --fondo: #1E1E1E;
+    --color-primario: #81A1C1;
+    --color-secundario: #88C0D0;
+    --color-terciario: #5E81AC;
+    --color-acento: #BF616A;
+    --color-neutro: #3B4252;
+    --texto-principal: #D8DEE9;
+    --texto-secundario: #E5E9F0;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+.presentacion__proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 10%;
+    gap: 82px;
+}
+
+.presentacion__contenido__proyectos {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid var(--color-terciario);
+    border-radius: 8px;
+    padding: 3%;
+    background-color: var(--color-neutro);
+    transition: background-color 0.3s;
+}
+
+.presentacion__contenido__titulo_proyectos {
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    margin-bottom: 2%;
+    color: var(--texto-principal);
+}
+
+.presentacion__contenido__texto__proyectos {
+    font-size: 1rem;
+    font-family: var(--fuente-montserrat);
+    color: var(--texto-secundario);
+}
+
+h2 {
+    text-align: center;
+    color: var(--texto-secundario);
+}
+
+.presentacion__imagen__proyectos {
+    width: 100%;
+}
+
+.presentacion__enlaces__proyectos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__contenido__proyectos:hover {
+    background-color: var(--color-acento);
+}
+
+.presentacion__enlaces__link__proyectos {
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--texto-principal);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--color-neutro);
+    transition: background-color 0.3s;
+}
+
+.presentacion__enlaces__link__proyectos:hover {
+    background-color: var(--color-primario);
+}
+
+@media (max-width: 1200px) {
+    .presentacion__proyectos {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+}
