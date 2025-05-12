@@ -1,44 +1,95 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/certificates.css">
+    <title>Portafolio Personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Inicio</a>
-            <a class="header__menu__link" href="about.html">Sobre mí</a>
-            <a class="header__menu__link" href="projects.html">Proyectos</a>
-        </nav>
-    </header>
-    <main class="presentacion">
-        <section class="presentacion__contenido">
-            <h1 class="presentacion__contenido__titulo">
-                ¿Tienes una idea genial? <strong class="titulo-destaque">¡Hagamos que cobre vida!</strong>
-            </h1>
-    
-            <p class="presentacion__contenido__texto">
-                ¡Hola! Soy Giovanni López, desarrollador Web con especialización en Java, python y C#. Ayudo a pequeños negocios y diseñadores a llevar a cabo buenas ideas. ¿Hablamos?
+    <div class="container">
+
+        <header class="header">
+            <!--<img src="img/yo3.jpeg" alt="Profile" class="profile-pic">-->
+            <h1 class="title">Giovanni López</h1>
+            <h2 class="subtitle">Backend Developer</h2>
+            <p class="tagline">"El verdadero conocimiento se encuentra en el vivir, no solo en el pensar."</p>
+        </header>
+
+        <section class="about-me">
+            <h2 class="section-title">Sobre mí</h2>
+            <p>
+                Desarrollador <strong>back-end</strong> enfocado en crear aplicaciones prácticas, escalables y bien estructuradas. Me interesa la <strong>ciencia de datos</strong> y la <strong>inteligencia artificial</strong>, áreas donde encuentro oportunidades para combinar <strong>creatividad</strong> y <strong>tecnología</strong>. Disfruto aprendiendo nuevas herramientas y metodologías para resolver problemas de forma efectiva y contribuir a proyectos innovadores. Mi objetivo es seguir creciendo como profesional, enfrentando retos que impulsen mi desarrollo y aportando soluciones que marquen la diferencia.
             </p>
-            <div class="presentacion__enlaces">
-                <h2 class="presentacion__enlaces__subtitulo">
-                    Accede a mis redes:
-                </h2>
-                <a class="presentacion__enlaces__link" href="https://github.com/Gi0yis"><img src="./assets/github.png"> Github</a>
-                <a class="presentacion__enlaces__link" href="https://www.linkedin.com/in/gi0yis/"><img src="./assets/linkedin.png"> LinkedIn</a>
-                <a class="presentacion__enlaces__link" href="https://giotechnoo.blogspot.com/"><img src="./assets/logo-blogger.png"> Blog</a>
-                <a class="presentacion__enlaces__link" href="https://www.instagram.com/gio_yis?igsh=MTc0NzN3N3lsYjVjNw=="><img src="./assets/instagram.png"> Instagram</a>
-                <a class="presentacion__enlaces__link" href="https://x.com/Gioyis004?t=0HnqESqpmXsoUG4n-YU-mw&s=09"><img src="./assets/twitter-novo.png"></a>
+            <p>
+                También soy docente, ayudando a los estudiantes a aprender programación y tecnología. Me gusta combinar la enseñanza práctica y el desarrollo profesional continuo.
+            </p>
+        </section>
+
+        <section class="skills">
+            <h2 class="section-title">Habilidades</h2>
+            <ul class="skills-list">
+                <li><i class="fas fa-code"></i> Desarrollo Backend</li>
+                <li><i class="fas fa-database"></i> Bases de Datos (SQL)</li>
+                <li><i class="fas fa-cloud"></i> Azure </li>
+                <li><i class="fas fa-code"></i> Java </li>
+                <li><i class="fas fa-code"></i> Python </li>
+                <li><i class="fas fa-code"></i> C# </li>
+                <li><i class="fas fa-code"></i> Dart </li>
+                <li><i class="fas fa-chalkboard-teacher"></i> Docencia en Programación</li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="projects-grid">
+              
+                <div class="project-card">
+                    <img src="img/seedlink.png" alt="Proyecto 1" class="project-img">
+                    <h3 class="project-title">SeedLink-AI</h3>
+                    <p class="project-description">
+                        Es una solución innovadora para la agricultura sostenible que combina inteligencia artificial y prácticas tradicionales mayas. Diseñada para funcionar tanto online como offline.
+                    </p>
+                    <a href="https://github.com/Gi0yis/SeedLink-AI" class="project-link">Ver más</a>
+                </div>
+               
+                <div class="project-card">
+                    <img src="img/control-estudiantes.png" alt="Proyecto 2" class="project-img">
+                    <h3 class="project-title">Control de Estudiantes</h3>
+                    <p class="project-description">
+                        Aplicación multiplataforma para gestionar calificaciones y asistencia, con sincronización offline.
+                    </p>
+                    <a href="#" class="project-link">Ver más</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="img/econecta.png" alt="Proyecto 3" class="project-img">
+                    <h3 class="project-title">EcoNecta</h3>
+                    <p class="project-description">
+                        Plataforma para la sostenibilidad agrícola, combinando análisis climático, IA y automatización.
+                    </p>
+                    <a href="#" class="project-link">Ver más</a>
+                </div>
             </div>
         </section>
-        <img class="presentacion__imagen" src="./assets/laptop.png" alt="Imagen de una computadora">
-    </main>
-    <footer class="footer">
-        <p>Desarrollado por Giovanni López</p>
-    </footer>
+
+        <section class="contact">
+            <h2 class="section-title">Contacto</h2>
+            <p>¿Interesado en colaborar o simplemente charlar? ¡Estoy disponible!</p>
+            <ul class="contact-list">
+                <li><a href="https://www.linkedin.com/in/gi0yis" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/Gi0yis" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="https://www.instagram.com/gio_yis?igsh=MTc0NzN3N3lsYjVjNw==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://x.com/Gioyis004?t=yvQqo4IVM1sJWBt981AbAw&s=09" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><i class="fas fa-envelope"></i> g.y.l.g.1804@gmail.com</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <p>© 2024 Giovanni López. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>
