@@ -134,6 +134,7 @@ body {
     font-size: 1rem;
     color: #555;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .project-link {
