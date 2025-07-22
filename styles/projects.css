@@ -95,7 +95,7 @@ h2 {
 
 @media (max-width: 1200px) {
     .presentacion__proyectos {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 5%;
     }
 
