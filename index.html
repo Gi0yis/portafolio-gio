@@ -1,115 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioyis</title>
-    <link rel="icon" href="assets/iconP2.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/certificates.css">
 </head>
 <body>
-    <div class="container">
-
-        <header class="header">
-            <!--<img src="img/yo3.jpeg" alt="Profile" class="profile-pic">-->
-            <h1 class="title">Giovanni López</h1>
-            <h2 class="subtitle">Backend Developer</h2>
-            <p class="tagline">
-                Desarrollador backend apasionado por la ciencia de datos y la inteligencia artificial.
+    <header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html">Inicio</a>
+            <a class="header__menu__link" href="about.html">Sobre mí</a>
+            <a class="header__menu__link" href="projects.html">Proyectos</a>
+        </nav>
+    </header>
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <h1 class="presentacion__contenido__titulo">
+                ¿Tienes una idea genial? <strong class="titulo-destaque">¡Hagamos que cobre vida!</strong>
+            </h1>
+    
+            <p class="presentacion__contenido__texto">
+                ¡Hola! Soy Giovanni López, desarrollador Web con especialización en Java, python y C#. Ayudo a pequeños negocios y diseñadores a llevar a cabo buenas ideas. ¿Hablamos?
             </p>
-        </header>
-
-        <section class="about-me">
-            <h2 class="section-title">Sobre mí</h2>
-            <p>
-                Mi trayectoria profesional se ha caracterizado por la participación activa en proyectos que exploran el potencial de los servicios de Azure y la aplicación de la inteligencia artificial para resolver problemas complejos. He trabajado en la implementación de soluciones que integran APIs de búsqueda avanzadas, análisis de texto sofisticado y modelos de lenguaje de última generación, todo dentro de entornos de desarrollo basados en la nube. Esta experiencia se ha consolidado en entornos de desafío e innovación, tales como los Hackathones organizados por Microsoft.
-            </p>
-            <p>
-                Más allá del desarrollo de software, me apasiona la enseñanza y he tenido la oportunidad de formar a más de 100 estudiantes en diversas instituciones educativas. He diseñado planes de estudio adaptados a diferentes niveles, abarcando desde los fundamentos de la programación hasta lenguajes como Python, Java, JavaScript y C. Además, he fomentado la exploración de la inteligencia artificial y el desarrollo web a través de proyectos prácticos.
-            </p>
-            <p>
-                Mi interés radica en la investigación y aplicación de la inteligencia artificial en diversos campos, especialmente en la automatización de procesos y el análisis de datos.
-            </p>
-        </section>
-
-        <section class="skills">
-            <h2 class="section-title">Habilidades</h2>
-            <ul class="skills-list">
-                <li><i class="fas fa-code"></i> Desarrollo Backend</li>
-                <li><i class="fas fa-database"></i> Bases de Datos (SQL)</li>
-                <li><i class="fas fa-cloud"></i> Azure </li>
-                <li><i class="fas fa-code"></i> Java </li>
-                <li><i class="fas fa-code"></i> Python </li>
-                <li><i class="fas fa-code"></i> C </li>
-                <li><i class="fas fa-code"></i> C# </li>
-                <li><i class="fas fa-code"></i> Dart </li>
-                <li><i class="fas fa-code"></i> Kotlin </li>
-                <li><i class="fas fa-code"></i> HTML </li>
-                <li><i class="fas fa-code"></i> CSS </li>
-                <li><i class="fas fa-code"></i> JavaScript </li>
-                <li><i class="fas fa-chalkboard-teacher"></i> Docencia en Programación</li>
-            </ul>
-        </section>
-
-        <section class="projects">
-            <h2 class="section-title">Proyectos</h2>
-            <div class="projects-grid">
-              
-                <div class="project-card">
-                    <img src="assets/lotus.jpeg" alt="Proyecto 1" class="project-img">
-                    <h3 class="project-title">LotusVerify</h3>
-                    <p class="project-description">
-                        Es una extensión de navegador que verifica contenido generado por IA como ChatGPT y Gemini, comparándolo con fuentes confiables en línea. Ideal para investigadores, académicos y curiosos, ofrece validaciones rápidas, seguras y precisas, ayudándote a distinguir hechos reales de la ficción digital.
-                    </p>
-                    <a href="https://github.com/Gi0yis/lotus-verify" class="project-link">Ver más</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/roi-pro.png" alt="Proyecto 2" class="project-img">
-                    <h3 class="project-title">QuoVerit</h3>
-                    <p class="project-description">
-                        Es una app inteligente que ayuda a empresas a calcular su Retorno de Inversión (ROI) analizando métricas clave como presupuesto, productividad y costos. Genera recomendaciones personalizadas usando IA y ofrece resultados claros en una interfaz interactiva.
-                    </p>
-                    <a href="https://github.com/The-Manuel-G/ROI-calculator-transformation-success" class="project-link">Ver más</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/DataCrafter.png" alt="Proyecto 3" class="project-img">
-                    <h3 class="project-title">DataCrafter</h3>
-                    <p class="project-description">
-                        DataCrafter es una plataforma que convierte montañas de PDFs, imágenes y archivos complejos en conocimiento accionable, permitiéndote hacer búsquedas semánticas y consultas en lenguaje natural con referencias precisas a las fuentes originales.
-                    </p>
-                    <a href="https://github.com/Gi0yis/DataCrafter" class="project-link">Ver más</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/pc2 (1).png" alt="Proyecto 4" class="project-img">
-                    <h3 class="project-title">PythagorasCalc</h3>
-                    <p class="project-Sdescription">
-                        Es una aplicación móvil creada para calcular el lado faltante de un triángulo rectángulo.
-                    </p>
-                    <a href="https://github.com/Gi0yis/pythagoras-calculator" class="project-link">Ver más</a>
-                </div>
+            <div class="presentacion__enlaces">
+                <h2 class="presentacion__enlaces__subtitulo">
+                    Accede a mis redes:
+                </h2>
+                <a class="presentacion__enlaces__link" href="https://github.com/Gi0yis"><img src="./assets/github.png"> Github</a>
+                <a class="presentacion__enlaces__link" href="https://www.linkedin.com/in/gi0yis/"><img src="./assets/linkedin.png"> LinkedIn</a>
+                <a class="presentacion__enlaces__link" href="https://giotechnoo.blogspot.com/"><img src="./assets/logo-blogger.png"> Blog</a>
+                <a class="presentacion__enlaces__link" href="https://www.instagram.com/gio_yis?igsh=MTc0NzN3N3lsYjVjNw=="><img src="./assets/instagram.png"> Instagram</a>
+                <a class="presentacion__enlaces__link" href="https://x.com/Gioyis004?t=0HnqESqpmXsoUG4n-YU-mw&s=09"><img src="./assets/twitter-novo.png"></a>
             </div>
         </section>
-
-        <section class="contact">
-            <h2 class="section-title">Contacto</h2>
-            <p>¿Interesado en colaborar o simplemente charlar? ¡Estoy disponible!</p>
-            <ul class="contact-list">
-                <li><a href="https://www.linkedin.com/in/gi0yis" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://github.com/Gi0yis" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                <li><a href="https://www.instagram.com/gio_yis?igsh=MTc0NzN3N3lsYjVjNw==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="https://x.com/Gioyis004?t=yvQqo4IVM1sJWBt981AbAw&s=09" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                <li><i class="fas fa-envelope"></i> g.y.l.g.1804@gmail.com</li>
-            </ul>
-        </section>
-
-        <footer class="footer">
-            <p>© 2025 Giovanni López. Todos los derechos reservados.</p>
-        </footer>
-    </div>
+        <img class="presentacion__imagen" src="./assets/laptop.png" alt="Imagen de una computadora">
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Giovanni López</p>
+    </footer>
 </body>
 </html>
