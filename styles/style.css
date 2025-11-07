@@ -1,6 +1,6 @@
 /* * ========================================
  * ESTILO DE TERMINAL ÚNICO Y COMPLETO
- * Versión 4.0 - Incluye Proyectos
+ * Versión 5.0 - Incluye TODO
  * ========================================
  */
 
@@ -8,13 +8,13 @@
 :root {
     /* Paleta nórdica */
     --fondo: #1E1E1E;
-    --color-primario: #81A1C1;  /* Azul claro */
-    --color-secundario: #88C0D0; /* Turquesa (para prompts y enlaces) */
-    --color-terciario: #5E81AC;  /* Azul más oscuro (para bordes) */
-    --color-acento: #BF616A;     /* Rojo */
-    --color-neutro: #3B4252;     /* Gris-azul oscuro (para fondos de hover) */
-    --texto-principal: #D8DEE9;  /* Blanco-gris */
-    --texto-secundario: #E5E9F0; /* Blanco más brillante */
+    --color-primario: #81A1C1;
+    --color-secundario: #88C0D0;
+    --color-terciario: #5E81AC; 
+    --color-acento: #BF616A;   
+    --color-neutro: #3B4252;     
+    --texto-principal: #D8DEE9;  
+    --texto-secundario: #E5E9F0; 
 
     /* Fuente de la terminal */
     --fuente-terminal: "Source Code Pro", monospace;
@@ -45,7 +45,7 @@ html, body {
 .terminal-prompt,
 .terminal-box,
 .terminal-nav,
-.proyectos-grid { /* Añadimos el grid */
+.proyectos-grid {
     margin-bottom: 20px;
 }
 
@@ -53,7 +53,7 @@ html, body {
 
 /* Mensaje de "Último login" */
 .terminal-login {
-    color: var(--color-terciario); /* Color más apagado */
+    color: var(--color-terciario);
     font-size: 0.9em;
 }
 
@@ -85,11 +85,11 @@ html, body {
     font-weight: 700;
 }
 .prompt-symbol {
-    color: var(--color-secundario); /* Turquesa brillante */
+    color: var(--color-secundario);
     margin-right: 15px;
 }
 .prompt-command {
-    color: var(--texto-secundario); /* Blanco brillante */
+    color: var(--texto-secundario);
     font-weight: 400;
 }
 
@@ -98,7 +98,7 @@ html, body {
     border: 1px solid var(--color-terciario);
     border-radius: 4px;
     padding: 20px;
-    margin-top: 10px; /* Separación del prompt */
+    margin-top: 10px;
 }
 
 /* Estilo de la Salida de Texto */
@@ -125,7 +125,7 @@ html, body {
 
 /* 5. Estilo de Enlaces (Index) */
 .terminal-links {
-    list-style: none; /* Sin bullets */
+    list-style: none;
     padding-left: 0; 
 }
 .terminal-links li {
@@ -164,7 +164,7 @@ html, body {
 .cursor {
     display: inline-block;
     width: 10px;
-    height: 1.2em; /* Coincide con el line-height */
+    height: 1.2em;
     background-color: var(--texto-principal);
     margin-left: 8px;
     animation: blink 1s step-end infinite;
@@ -178,7 +178,7 @@ html, body {
 /* 8. Responsividad (General) */
 @media (max-width: 768px) {
     html, body {
-        font-size: 1rem; /* Letra más pequeña en móvil */
+        font-size: 1rem;
     }
     .terminal-body {
         padding: 4%;
@@ -200,7 +200,7 @@ html, body {
  */
 .cert-box {
     display: flex;
-    flex-wrap: wrap; /* Para responsividad */
+    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
     padding: 25px;
@@ -226,11 +226,14 @@ html, body {
     width: 250px;
     height: 250px;
     object-fit: contain;
+    border-radius: 8px;
+    background-color: var(--texto-secundario);
     padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 .cert-box__link {
     font-family: var(--fuente-terminal);
-    color: var(--color-secundario); /* Turquesa */
+    color: var(--color-secundario);
     text-decoration: underline;
     font-weight: 700;
     font-size: 1.1em;
@@ -264,7 +267,7 @@ html, body {
 }
 
 /* * ========================================
- * 10. ¡NUEVO! ESTILOS PARA PROYECTOS
+ * 10. ESTILOS PARA PROYECTOS
  * ========================================
  */
 .proyectos-grid {
@@ -292,7 +295,6 @@ html, body {
     width: 100%;
     height: 200px;
     object-fit: contain;
-    /* Usamos un fondo más oscuro que el neutro */
     background-color: #2e3440; 
 }
 
@@ -300,7 +302,7 @@ html, body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Para que todas las tarjetas tengan la misma altura */
+    flex-grow: 1;
     gap: 15px;
 }
 
@@ -314,8 +316,7 @@ html, body {
 .proyecto-card__texto {
     font-family: var(--fuente-terminal);
     font-size: 1em;
-    flex-grow: 1; /* Empuja los enlaces al fondo */
-}
+    flex-grow: 1;
 
 .proyecto-card__enlaces {
     display: flex;
@@ -334,11 +335,11 @@ html, body {
     transition: background-color 0.2s;
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Espacio para el icono */
+    gap: 8px;
 }
 
 .proyecto-card__link:hover {
-    background-color: var(--fondo); /* Fondo del body */
+    background-color: var(--fondo);
     color: var(--texto-principal);
     text-decoration: none;
 }
@@ -348,10 +349,82 @@ html, body {
     height: 18px;
 }
 
-/* Responsividad para las tarjetas de proyecto */
 @media (max-width: 400px) {
     .proyectos-grid {
-        /* Tarjetas más pequeñas en pantallas estrechas */
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+}
+
+/* * ========================================
+ * 11. ESTILOS PARA FORMULARIO DE CONTACTO
+ * ========================================
+ */
+
+.terminal-form-box {
+    /* Hereda de .terminal-box */
+}
+
+.terminal-form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-family: var(--fuente-terminal);
+    font-weight: 700;
+    color: var(--texto-secundario);
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+    font-family: var(--fuente-terminal);
+    font-size: 1em;
+    color: var(--texto-principal);
+    background-color: var(--fondo);
+    border: 1px solid var(--color-terciario);
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px var(--color-primario);
+}
+
+.form-textarea {
+    resize: vertical; 
+}
+
+.form-submit {
+    font-family: var(--fuente-terminal);
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--fondo);
+    background-color: var(--color-primario);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+
+.form-submit:hover {
+    background-color: var(--color-secundario);
+}
+
+.form-status {
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: 700;
 }

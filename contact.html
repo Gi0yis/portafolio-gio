@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto :: Portafolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/style.css"> 
+</head>
+<body>
+
+    <main class="terminal-body">
+        
+        <div class="terminal-line">
+            <span class="terminal-login"></span> </div>
+
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="prompt-command">cat navigation.txt</span>
+        </div>
+        
+        <nav class="terminal-nav">
+            <a href="index.html">[ Inicio ]</a>
+            <a href="about.html">[ Sobre mí ]</a>
+            <a href="projects.html">[ Proyectos ]</a>
+            <a href="certificates.html">[ Certificados ]</a>
+            <a href="contact.html">[ Contacto ]</a>
+        </nav>
+
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="prompt-command">./run-contact-form.sh</span>
+        </div>
+        
+        <div class="terminal-box terminal-form-box">
+            <h1 class="presentacion__contenido__titulo">Contacto</h1>
+            <p class="presentacion__contenido__texto">
+                ¿Interesado en colaborar? Envíame un mensaje.
+            </p>
+            
+            <form id="contact-form" class="terminal-form" action="https://formspree.io/f/mldoqkrq" method="POST">
+                
+                <div class="form-group">
+                    <label class="form-label" for="email">Tu Email:</label>
+                    <input class="form-input" type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="subject">Asunto:</label>
+                    <input class="form-input" type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="message">Mensaje:</label>
+                    <textarea class="form-textarea" id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="form-submit">[ Enviar Mensaje ]</button>
+                </div>
+            </form>
+            
+            <p id="form-status" class="form-status"></p>
+        </div>
+        
+        <div class="terminal-output terminal-footer">
+            <p>(c) 2025 Giovanni López. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="terminal-prompt terminal-prompt--final">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="cursor">_</span>
+        </div>
+
+    </main>
+
+    <script>
+        const loginSpan = document.querySelector('.terminal-login');
+        if (loginSpan) {
+            const now = new Date();
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const dayName = days[now.getDay()];
+            const monthName = months[now.getMonth()];
+            const dayNum = now.getDate();
+            const year = now.getFullYear();
+            const time = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            loginSpan.textContent = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys005`;
+        }
+    </script>
+    
+    <script>
+        var form = document.getElementById("contact-form");
+        var statusElement = document.getElementById("form-status"); 
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // ¡CAMBIO AQUÍ!
+                    statusElement.innerHTML = "¡Gracias! Tu mensaje ha sido enviado.";
+                    statusElement.style.color = "var(--color-secundario)";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            statusElement.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            statusElement.innerHTML = "Oops! Hubo un problema al enviar tu mensaje.";
+                        }
+                        statusElement.style.color = "var(--color-acento)";
+                    })
+                }
+            }).catch(error => {
+                statusElement.innerHTML = "Oops! Hubo un problema al enviar tu mensaje.";
+                statusElement.style.color = "var(--color-acento)";
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
+</body>
+</html>
