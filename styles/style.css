@@ -8,13 +8,13 @@
 :root {
     /* Paleta nórdica */
     --fondo: #1E1E1E;
-    --color-primario: #81A1C1;
-    --color-secundario: #88C0D0;
-    --color-terciario: #5E81AC; 
-    --color-acento: #BF616A;   
-    --color-neutro: #3B4252;     
-    --texto-principal: #D8DEE9;  
-    --texto-secundario: #E5E9F0; 
+    --color-primario: #81A1C1;  /* Azul claro */
+    --color-secundario: #88C0D0; /* Turquesa (para prompts y enlaces) */
+    --color-terciario: #5E81AC;  /* Azul más oscuro (para bordes) */
+    --color-acento: #BF616A;     /* Rojo */
+    --color-neutro: #3B4252;     /* Gris-azul oscuro (para fondos de hover) */
+    --texto-principal: #D8DEE9;  /* Blanco-gris */
+    --texto-secundario: #E5E9F0; /* Blanco más brillante */
 
     /* Fuente de la terminal */
     --fuente-terminal: "Source Code Pro", monospace;
@@ -45,7 +45,7 @@ html, body {
 .terminal-prompt,
 .terminal-box,
 .terminal-nav,
-.proyectos-grid {
+.proyectos-grid { /* Añadimos el grid */
     margin-bottom: 20px;
 }
 
@@ -53,7 +53,7 @@ html, body {
 
 /* Mensaje de "Último login" */
 .terminal-login {
-    color: var(--color-terciario);
+    color: var(--color-terciario); /* Color más apagado */
     font-size: 0.9em;
 }
 
@@ -85,11 +85,11 @@ html, body {
     font-weight: 700;
 }
 .prompt-symbol {
-    color: var(--color-secundario);
+    color: var(--color-secundario); /* Turquesa brillante */
     margin-right: 15px;
 }
 .prompt-command {
-    color: var(--texto-secundario);
+    color: var(--texto-secundario); /* Blanco brillante */
     font-weight: 400;
 }
 
@@ -98,7 +98,7 @@ html, body {
     border: 1px solid var(--color-terciario);
     border-radius: 4px;
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 10px; /* Separación del prompt */
 }
 
 /* Estilo de la Salida de Texto */
@@ -125,7 +125,7 @@ html, body {
 
 /* 5. Estilo de Enlaces (Index) */
 .terminal-links {
-    list-style: none;
+    list-style: none; /* Sin bullets */
     padding-left: 0; 
 }
 .terminal-links li {
@@ -164,7 +164,7 @@ html, body {
 .cursor {
     display: inline-block;
     width: 10px;
-    height: 1.2em;
+    height: 1.2em; /* Coincide con el line-height */
     background-color: var(--texto-principal);
     margin-left: 8px;
     animation: blink 1s step-end infinite;
@@ -178,7 +178,7 @@ html, body {
 /* 8. Responsividad (General) */
 @media (max-width: 768px) {
     html, body {
-        font-size: 1rem;
+        font-size: 1rem; /* Letra más pequeña en móvil */
     }
     .terminal-body {
         padding: 4%;
@@ -200,7 +200,7 @@ html, body {
  */
 .cert-box {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Para responsividad */
     align-items: center;
     gap: 30px;
     padding: 25px;
@@ -233,7 +233,7 @@ html, body {
 }
 .cert-box__link {
     font-family: var(--fuente-terminal);
-    color: var(--color-secundario);
+    color: var(--color-secundario); /* Turquesa */
     text-decoration: underline;
     font-weight: 700;
     font-size: 1.1em;
@@ -295,6 +295,7 @@ html, body {
     width: 100%;
     height: 200px;
     object-fit: contain;
+    /* Usamos un fondo más oscuro que el neutro */
     background-color: #2e3440; 
 }
 
@@ -302,7 +303,7 @@ html, body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1; /* Para que todas las tarjetas tengan la misma altura */
     gap: 15px;
 }
 
@@ -316,7 +317,8 @@ html, body {
 .proyecto-card__texto {
     font-family: var(--fuente-terminal);
     font-size: 1em;
-    flex-grow: 1;
+    flex-grow: 1; /* Empuja los enlaces al fondo */
+}
 
 .proyecto-card__enlaces {
     display: flex;
@@ -335,11 +337,11 @@ html, body {
     transition: background-color 0.2s;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px; /* Espacio para el icono */
 }
 
 .proyecto-card__link:hover {
-    background-color: var(--fondo);
+    background-color: var(--fondo); /* Fondo del body */
     color: var(--texto-principal);
     text-decoration: none;
 }
@@ -351,6 +353,7 @@ html, body {
 
 @media (max-width: 400px) {
     .proyectos-grid {
+        /* Tarjetas más pequeñas en pantallas estrechas */
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
@@ -387,7 +390,7 @@ html, body {
     font-family: var(--fuente-terminal);
     font-size: 1em;
     color: var(--texto-principal);
-    background-color: var(--fondo);
+    background-color: var(--fondo); /* Fondo de la terminal */
     border: 1px solid var(--color-terciario);
     border-radius: 4px;
     padding: 10px;
@@ -402,7 +405,7 @@ html, body {
 }
 
 .form-textarea {
-    resize: vertical; 
+    resize: vertical; /* Permite al usuario ajustar la altura */
 }
 
 .form-submit {
