@@ -3,68 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/certificates.css">
+    <title>Certificados :: Portafolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Inicio</a>
-            <a class="header__menu__link" href="about.html">Sobre mí</a>
+
+    <main class="terminal-body">
+        
+        <div class="terminal-line">
+            <span class="terminal-login"></span> </div>
+        </div>
+
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="prompt-command">cat navigation.txt</span>
+        </div>
+        
+        <nav class="terminal-nav">
+            <a href="index.html">[ Inicio ]</a>
+            <a href="about.html">[ Sobre mí ]</a>
+            <a href="projects.html">[ Proyectos ]</a>
+            <a href="certificates.html">[ Certificados ]</a>
         </nav>
-    </header>
-    <main class="presentacion">
-        <section class="presentacion__contenido__certificado">
 
-            <h1 class="presentacion__contenido__titulo">
-                Certificados
-            </h1>
-
-            <div class="presentacion__certificado">
-                <section class="presentacion__contenido__certificado">
-                    <h2 class="presentacion__enlaces__subtitulo">Innovation Challenge Hackathon December 2024</h2>
-                    <a class="link__certificado" href="https://www.credly.com/badges/75c6e104-07d6-4e44-b147-7f65462f63c9/linked_in_profile">Ver credencial</a>
-                </section>
-                <img class="presentacion__imagen__certificado" src="./assets/innovation-challenge-hackathon-december-2024.png" alt="Logo de la certificación ai-102">
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="prompt-command">ls -l ./certificates</span>
+        </div>
+        
+        <div class="terminal-box cert-box">
+            <div class="cert-box__contenido">
+                <h2 class="cert-box__titulo">Innovation Challenge Hackathon December 2024</h2>
+                <a class="cert-box__link" href="https://www.credly.com/badges/75c6e104-07d6-4e44-b147-7f65462f63c9/linked_in_profile">Ver credencial</a>
             </div>
+            <img class="cert-box__imagen" src="./assets/innovation-challenge-hackathon-december-2024.png" alt="Badge de Innovation Challenge Hackathon December 2024">
+        </div>
 
-            <div class="presentacion__certificado">
-                <section class="presentacion__contenido__certificado">
-                    <h2 class="presentacion__enlaces__subtitulo">Innovation Challenge Hackathon October 2024</h2>
-                    <a class="link__certificado" href="https://www.credly.com/badges/7b33b428-1a83-49be-b673-46e66ebcba86/linked_in_profile">Ver credencial</a>
-                </section>
-                <img class="presentacion__imagen__certificado" src="./assets/innovation-challenge-hackathon-october-2024.png" alt="Logo de la certificación ai-102">
+        <div class="terminal-box cert-box cert-box--invertido">
+            <img class="cert-box__imagen" src="./assets/innovation-challenge-hackathon-october-2024.png" alt="Badge de Innovation Challenge Hackathon October 2024">
+            <div class="cert-box__contenido">
+                <h2 class="cert-box__titulo">Innovation Challenge Hackathon October 2024</h2>
+                <a class="cert-box__link" href="https://www.credly.com/badges/7b33b428-1a83-49be-b673-46e66ebcba86/linked_in_profile">Ver credencial</a>
             </div>
+        </div>
 
-            <div class="presentacion__certificado">
-                <section class="presentacion__contenido__certificado">
-                    <h2 class="presentacion__enlaces__subtitulo">Microsoft Certified: Azure AI Engineer Associate</h2>
-                    <a class="link__certificado" href="https://learn.microsoft.com/api/credentials/share/en-us/gi0yis/1B6AB72E395F76C0?sharingId=9D0EE01F0D7920D6">Ver certificado</a>
-                </section>
-                <img class="presentacion__imagen__certificado" src="./assets/ai-102.png" alt="Logo de la certificación ai-102">
+        <div class="terminal-box cert-box">
+            <div class="cert-box__contenido">
+                <h2 class="cert-box__titulo">Microsoft Certified: Azure AI Engineer Associate</h2>
+                <a class="cert-box__link" href="https://learn.microsoft.com/api/credentials/share/en-us/gi0yis/1B6AB72E395F76C0?sharingId=9D0EE01F0D7920D6">Ver certificado</a>
             </div>
+            <img class="cert-box__imagen" src="./assets/ai-102.webp" alt="Logo de la certificación Microsoft Azure AI Engineer Associate">
+        </div>
 
-            <div class="presentacion__certificado">
-                <section class="presentacion__contenido__certificado">
-                    <h2 class="presentacion__enlaces__subtitulo">Formación SQL con MySQL Server de Oracle - ONE</h2>
-                    <a class="link__certificado" href="https://app.aluracursos.com/degree/certificate/1e8c53a2-c41f-4218-8fe8-b4131d814d5e?lang">Ver certificado</a>
-                </section>
-                <img class="presentacion__imagen__certificado" src="./assets/logo-one.png" alt="Logo del programa Oracle Next Education">
+        <div class="terminal-box cert-box cert-box--invertido">
+            <img class="cert-box__imagen" src="./assets/logo-one.png" alt="Logo del programa Oracle Next Education">
+            <div class="cert-box__contenido">
+                <h2 class="cert-box__titulo">Formación SQL con MySQL Server de Oracle - ONE</h2>
+                <a class="cert-box__link" href="https://app.aluracursos.com/degree/certificate/1e8c53a2-c41f-4218-8fe8-b4131d814d5e?lang">Ver certificado</a>
             </div>
+        </div>
 
-            <div class="presentacion__certificado">
-                <section class="presentacion__contenido__certificado">
-                    <h2 class="presentacion__enlaces__subtitulo">Programa Oracle Next Education F2 T6 Back-end</h2>
-                    <a class="link__certificado" href="https://app.aluracursos.com/program/certificate/3e9e9eb3-79cb-47f2-8ae9-3bb0de53ec1a?lang">Ver certificado</a>
-                </section>
-                <img class="presentacion__imagen__certificado" src="./assets/logo-one.png" alt="Logo del programa Oracle Next Education">
+        <div class="terminal-box cert-box">
+            <div class="cert-box__contenido">
+                <h2 class="cert-box__titulo">Programa Oracle Next Education F2 T6 Back-end</h2>
+                <a class="cert-box__link" href="https://app.aluracursos.com/program/certificate/3e9e9eb3-79cb-47f2-8ae9-3bb0de53ec1a?lang">Ver certificado</a>
             </div>
-            
-        </section>
+            <img class="cert-box__imagen" src="./assets/logo-one.png" alt="Logo del programa Oracle Next Education">
+        </div>
+
+        
+        <div class="terminal-output terminal-footer">
+            <p>(c) 2025 Giovanni López. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="terminal-prompt terminal-prompt--final">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="cursor">_</span>
+        </div>
+
     </main>
-    <footer class="footer">
-        <p>Desarrollado por Giovanni López</p>
-    </footer>
+
+    <script>
+        // 1. Encontrar el elemento que queremos rellenar
+        const loginSpan = document.querySelector('.terminal-login');
+
+        // 2. Obtener la fecha y hora actual
+        const now = new Date();
+
+        // 3. Nombres para formatear la fecha
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        
+        // 4. Extraer cada parte
+        const dayName = days[now.getDay()];
+        const monthName = months[now.getMonth()];
+        const dayNum = now.getDate(); // Da el número, ej: 6
+        const year = now.getFullYear();
+        
+        // Formatea la hora como "21:53:00" (formato 24h)
+        const time = now.toLocaleTimeString('en-US', { 
+            hour12: false, 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit' 
+        });
+
+        // 5. Construir el texto final
+        const loginString = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys004`;
+
+        // 6. Poner el texto en la página
+        loginSpan.textContent = loginString;
+    </script>
+
 </body>
 </html>

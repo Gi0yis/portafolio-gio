@@ -1,147 +1,357 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* * ========================================
+ * ESTILO DE TERMINAL ÚNICO Y COMPLETO
+ * Versión 4.0 - Incluye Proyectos
+ * ========================================
+ */
 
+/* 1. Definición de Colores y Fuentes */
 :root {
     /* Paleta nórdica */
     --fondo: #1E1E1E;
-    --color-primario: #81A1C1;
-    --color-secundario: #88C0D0;
-    --color-terciario: #5E81AC;
-    --color-acento: #BF616A;
-    --color-neutro: #3B4252;
-    --texto-principal: #D8DEE9;
-    --texto-secundario: #E5E9F0;
+    --color-primario: #81A1C1;  /* Azul claro */
+    --color-secundario: #88C0D0; /* Turquesa (para prompts y enlaces) */
+    --color-terciario: #5E81AC;  /* Azul más oscuro (para bordes) */
+    --color-acento: #BF616A;     /* Rojo */
+    --color-neutro: #3B4252;     /* Gris-azul oscuro (para fondos de hover) */
+    --texto-principal: #D8DEE9;  /* Blanco-gris */
+    --texto-secundario: #E5E9F0; /* Blanco más brillante */
 
-    --fuente-montserrat: "Montserrat", sans-serif;
-    --fuente-krona: "Krona One", sans-serif;
+    /* Fuente de la terminal */
+    --fuente-terminal: "Source Code Pro", monospace;
 }
 
+/* 2. Reseteo y Estilo Global del Body */
 * {
-    padding: 0;
     margin: 0;
-}
-
-body {
-    background-color: var(--fondo);
-    color: var(--texto-principal);
+    padding: 0;
     box-sizing: border-box;
 }
 
-.header {
-    padding: 2% 0 0 10%;
+html, body {
+    background-color: var(--fondo);
+    color: var(--texto-principal);
+    font-family: var(--fuente-terminal);
+    font-size: 1.15rem;
+    line-height: 1.6;
 }
 
-.header__menu {
+/* 3. Estructura de la Terminal */
+.terminal-body {
+    padding: 2.5%;
+    min-height: 100vh; 
+}
+
+.terminal-line,
+.terminal-prompt,
+.terminal-box,
+.terminal-nav,
+.proyectos-grid { /* Añadimos el grid */
+    margin-bottom: 20px;
+}
+
+/* 4. Estilos de los Componentes de la Terminal */
+
+/* Mensaje de "Último login" */
+.terminal-login {
+    color: var(--color-terciario); /* Color más apagado */
+    font-size: 0.9em;
+}
+
+/* Navegación (reemplaza el header) */
+.terminal-nav {
     display: flex;
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 10px;
 }
-
-.header__menu__link, .link__certificado {
-    font-family: var(--fuente-montserrat);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--color-primario);
+.terminal-nav a {
+    color: var(--texto-secundario);
     text-decoration: none;
+    font-weight: 700;
+    background-color: var(--color-neutro);
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+.terminal-nav a:hover {
+    background-color: var(--color-primario);
+    color: var(--fondo);
 }
 
-.presentacion {
+/* Estilo del Prompt (>) */
+.terminal-prompt {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 5% 10%;
-    gap: 82px;
+    font-weight: 700;
 }
-
-.presentacion__contenido {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.prompt-symbol {
+    color: var(--color-secundario); /* Turquesa brillante */
+    margin-right: 15px;
 }
-
-.presentacion__contenido__titulo {
-    font-size: 2.25rem;
-    font-family: var(--fuente-krona);
+.prompt-command {
+    color: var(--texto-secundario); /* Blanco brillante */
     font-weight: 400;
 }
 
-.presentacion__imagen {
-    width: 50%;
+/* Cajas de Contenido (Para "Sobre mí") */
+.terminal-box {
+    border: 1px solid var(--color-terciario);
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 10px; /* Separación del prompt */
 }
 
+/* Estilo de la Salida de Texto */
+.presentacion__contenido__titulo {
+    font-family: var(--fuente-terminal);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
 .titulo-destaque {
     color: var(--color-primario);
 }
-
 .presentacion__contenido__texto {
-    font-size: 1.5rem;
-    font-family: var(--fuente-montserrat);
-    color: var(--texto-principal);
+    font-family: var(--fuente-terminal);
+    font-size: 1em;
 }
-
-.presentacion__enlaces {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-}
-
 .presentacion__enlaces__subtitulo {
-    font-family: var(--fuente-krona);
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-family: var(--fuente-terminal);
+    font-size: 1em;
+    font-weight: 700;
     color: var(--texto-secundario);
+    margin-bottom: 10px;
 }
 
-.presentacion__enlaces__link, 
-.presentacion__enlaces__link__proyectos {
-    width: 50%;
-    text-align: center;
-    padding: 21.5px 0;
-    border-radius: 8px;
-    font-family: var(--fuente-montserrat);
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--texto-principal);
-    border: 2px solid var(--color-terciario);
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+/* 5. Estilo de Enlaces (Index) */
+.terminal-links {
+    list-style: none; /* Sin bullets */
+    padding-left: 0; 
+}
+.terminal-links li {
+    margin-bottom: 5px;
+}
+.terminal-links a {
+    font-family: var(--fuente-terminal);
+    color: var(--color-secundario); 
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 2px 0;
+    transition: background-color 0.2s;
+}
+.terminal-links a:hover {
     background-color: var(--color-neutro);
-    transition: background-color 0.3s;
+    color: var(--texto-principal);
+    text-decoration: none;
 }
 
-.presentacion__enlaces__link:hover {
-    background-color: var(--color-acento);
+/* 6. Footer (integrado) */
+.terminal-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--color-terciario);
+}
+.terminal-footer p {
+    font-size: 0.9em;
+    color: var(--color-terciario);
 }
 
-.footer {
-    background-color: var(--color-terciario);
-    padding: 1.5rem;
-    color: var(--fondo);
-    text-align: center;
-    font-family: var(--fuente-montserrat);
-    font-size: 1.5rem;
-    font-weight: 400;
+/* 7. Cursor Parpadeante */
+.terminal-prompt--final {
+    margin-top: 20px;
+}
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em; /* Coincide con el line-height */
+    background-color: var(--texto-principal);
+    margin-left: 8px;
+    animation: blink 1s step-end infinite;
 }
 
-@media (max-width: 1200px) {
-    .header {
-        padding: 5%;
-    }
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
 
-    .header__menu {
-        flex-direction: column;
-        gap: 2%;
+/* 8. Responsividad (General) */
+@media (max-width: 768px) {
+    html, body {
+        font-size: 1rem; /* Letra más pequeña en móvil */
     }
-
-    .presentacion {
-        flex-direction: column-reverse;
-        padding: 5%;
+    .terminal-body {
+        padding: 4%;
     }
+    .terminal-nav {
+        gap: 10px;
+    }
+    .terminal-nav a {
+        font-size: 0.9em;
+    }
+    .terminal-box {
+        padding: 15px;
+    }
+}
 
-    .presentacion__contenido {
-        width: auto;
+/* * ========================================
+ * 9. ESTILOS PARA CERTIFICADOS
+ * ========================================
+ */
+.cert-box {
+    display: flex;
+    flex-wrap: wrap; /* Para responsividad */
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+}
+.cert-box--invertido {
+    flex-direction: row-reverse;
+}
+.cert-box__contenido {
+    flex: 1; 
+    min-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cert-box__titulo {
+    font-family: var(--fuente-terminal);
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--texto-principal);
+    line-height: 1.4;
+}
+.cert-box__imagen {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    padding: 10px;
+}
+.cert-box__link {
+    font-family: var(--fuente-terminal);
+    color: var(--color-secundario); /* Turquesa */
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 2px 0;
+    transition: background-color 0.2s;
+    align-self: flex-start; 
+}
+.cert-box__link:hover {
+    background-color: var(--color-neutro);
+    color: var(--texto-principal);
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .cert-box, .cert-box--invertido {
+        flex-direction: column; 
+    }
+    .cert-box__contenido {
+        align-items: center;
+        text-align: center;
+    }
+    .cert-box__titulo {
+        font-size: 1.25em;
+    }
+    .cert-box__imagen {
+        width: 200px;
+        height: 200px;
+    }
+    .cert-box__link {
+        align-self: center; 
+    }
+}
+
+/* * ========================================
+ * 10. ¡NUEVO! ESTILOS PARA PROYECTOS
+ * ========================================
+ */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.proyecto-card {
+    background-color: var(--color-neutro);
+    border: 1px solid var(--color-terciario);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.proyecto-card__imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    /* Usamos un fondo más oscuro que el neutro */
+    background-color: #2e3440; 
+}
+
+.proyecto-card__contenido {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Para que todas las tarjetas tengan la misma altura */
+    gap: 15px;
+}
+
+.proyecto-card__titulo {
+    font-family: var(--fuente-terminal);
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--texto-principal);
+}
+
+.proyecto-card__texto {
+    font-family: var(--fuente-terminal);
+    font-size: 1em;
+    flex-grow: 1; /* Empuja los enlaces al fondo */
+}
+
+.proyecto-card__enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.proyecto-card__link {
+    font-family: var(--fuente-terminal);
+    color: var(--color-secundario);
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 2px 0;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espacio para el icono */
+}
+
+.proyecto-card__link:hover {
+    background-color: var(--fondo); /* Fondo del body */
+    color: var(--texto-principal);
+    text-decoration: none;
+}
+
+.proyecto-card__link img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Responsividad para las tarjetas de proyecto */
+@media (max-width: 400px) {
+    .proyectos-grid {
+        /* Tarjetas más pequeñas en pantallas estrechas */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
