@@ -1,108 +1,285 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio :: Giovanni López</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Gioyis | Estudio de Desarrollo de Software</title>
+    <meta name="description" content="Gioyis: Estudio de desarrollo de software enfocado en backend robusto, implementaciones Odoo y soluciones cloud.">
+    <!-- Fuentes Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/G.png" type="image/png" sizes="32x32">
+    <!-- Enlace a tu hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <main class="terminal-body">
-        
-        <div class="terminal-line">
-            <span class="terminal-login"></span> </div>
-        </div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" onclick="showPage('home')" class="logo">
+                <img src="img/G_gioyis_icon_pg.png" alt="Logo" width="135px" class="logo">
+            </a>
 
-        <div class="terminal-prompt">
-            <span class="prompt-symbol">&gt;</span>
-            <span class="prompt-command">cat navigation.txt</span>
-        </div>
-        
-        <nav class="terminal-nav">
-            <a href="index.html">[ Inicio ]</a>
-            <a href="about.html">[ Sobre mí ]</a>
-            <a href="projects.html">[ Proyectos ]</a>
-            <a href="certificates.html">[ Certificados ]</a>
-            <a href="contact.html">[ Contacto ]</a> </nav>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
 
-        <div class="terminal-prompt">
-            <span class="prompt-symbol">&gt;</span>
-            <span class="prompt-command">./run-welcome.sh</span>
-        </div>
-        
-        <div class="terminal-box">
-            <h1 class="presentacion__contenido__titulo">
-                ¿Tienes una idea genial? <strong class="titulo-destaque">¡Hagamos que cobre vida!</strong>
-            </h1>
-            <p class="presentacion__contenido__texto">
-                ¡Hola! Soy Giovanni López, desarrollador Back-End. Ayudo a pequeños negocios y diseñadores a llevar a cabo buenas ideas. ¿Hablamos?
-            </p>
-        </div>
-
-        <div class="terminal-prompt">
-            <span class="prompt-symbol">&gt;</span>
-            <span class="prompt-command">ls -l ./links</span>
-        </div>
-
-        <div class="terminal-box">
-            <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes:</h2>
-            <ul class="terminal-links">
-                <li><a href="https://github.com/Gi0yis">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/gi0yis/">LinkedIn</a></li>
-                <li><a href="https://giotechnoo.blogspot.com/">Blog</a></li>
-                <li><a href="https://www.instagram.com/gio_yis?igsh=MTc0NzN3N3lsYjVjNw==">Instagram</a></li>
-                <li><a href="https://x.com/Gioyis004?t=0HnqESqpmXsoUG4n-YU-mw&s=09">Twitter/X</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a onclick="showPage('home')" class="nav-link active" id="link-home">Inicio</a></li>
+                <li><a onclick="showPage('services')" class="nav-link" id="link-services">Servicios</a></li>
+                <li><a onclick="showPage('products')" class="nav-link" id="link-products">Productos</a></li>
+                <li><a onclick="showPage('about')" class="nav-link" id="link-about">Estudio</a></li>
+                <li><a onclick="showPage('contact')" class="nav-link nav-cta">Contacto</a></li>
             </ul>
         </div>
-        
-        <div class="terminal-output terminal-footer">
-            <p>(c) 2025 Giovanni López. Todos los derechos reservados.</p>
-        </div>
+    </nav>
 
-        <div class="terminal-prompt terminal-prompt--final">
-            <span class="prompt-symbol">&gt;</span>
-            <span class="cursor">_</span>
-        </div>
+    <main>
+        
+        <!-- SECCIÓN: INICIO -->
+        <section id="home" class="page-view active">
+            <div class="hero-layout">
+                <div>
+                    <span class="hero-badge">ESTUDIO DE DESARROLLO DIGITAL</span>
+                    <h1>Desarrollo de software <span class="text-highlight">ágil, moderno y eficiente</span>.</h1>
+                    <p>Ayudamos a empresas a construir infraestructura digital sólida. Sin burocracia, sin tecnicismos innecesarios, solo código que funciona y escala.</p>
+                    <div style="margin-top: 2rem;">
+                        <a onclick="showPage('contact')" class="btn btn-primary">Hablar de mi Proyecto</a>
+                        <a onclick="showPage('products')" class="btn btn-outline" style="margin-left: 1rem;">Ver Soluciones</a>
+                    </div>
+                </div>
+                
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                    </div>
+                    <div class="terminal-body">
+                        <span class="code-line"><span class="keyword">class</span> GioyisStudio:</span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="keyword">def</span> <span class="func">__init__</span>(self):</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;self.stack = [<span class="string">'Python'</span>, <span class="string">'Odoo'</span>, <span class="string">'Cloud'</span>]</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;self.focus = <span class="string">'Efficiency'</span></span>
+                        <br>
+                        <span class="code-line">&nbsp;&nbsp;<span class="keyword">def</span> <span class="func">build_solution</span>(self, problem):</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> ScalableSoftware(problem)</span>
+                        <br>
+                        <span class="code-line"><span class="keyword">>_</span> Sistema listo para desplegar...<span style="animation: blink 1s infinite">|</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="capabilities-section">
+                <div class="home-section-title">
+                    <h2>Enfoque Técnico</h2>
+                    <p>Tecnologías robustas para resolver desafíos reales.</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <strong>Cloud Native</strong>
+                        <span>Infraestructura escalable y segura en la nube.</span>
+                    </div>
+                    <div class="tech-card">
+                        <strong>Backend Core</strong>
+                        <span>Desarrollo sólido.</span>
+                    </div>
+                    <div class="tech-card">
+                        <strong>ERP Solutions</strong>
+                        <span>Implementación y personalización experta.</span>
+                    </div>
+                    <div class="tech-card">
+                        <strong>Web Apps</strong>
+                        <span>Interfaces modernas, rápidas y responsivas.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-section-title">
+                <h2>¿Por qué Gioyis?</h2>
+                <p>La ventaja de trabajar con un estudio enfocado.</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <h4>01. Trato Directo</h4>
+                    <p>Sin intermediarios ni gerentes de cuenta. Hablas directamente con quien construye tu software, garantizando claridad total.</p>
+                </div>
+                <div class="why-card">
+                    <h4>02. Código Artesanal</h4>
+                    <p>No usamos plantillas genéricas. Cada línea de código está pensada para resolver tu problema específico de la forma más eficiente.</p>
+                </div>
+                <div class="why-card">
+                    <h4>03. Transparencia</h4>
+                    <p>Sabrás exactamente qué tecnologías usamos, cómo funciona tu sistema y serás dueño absoluto de tu propiedad intelectual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: SERVICIOS -->
+        <section id="services" class="page-view">
+            <h2>Nuestras Áreas de Especialización</h2>
+            <p>Diseñamos soluciones técnicas a medida, priorizando la seguridad y el retorno de inversión.</p>
+            <div class="divider"></div>
+            
+            <div class="services-list">
+                <div class="service-row">
+                    <div class="service-icon">01</div>
+                    <div class="service-content">
+                        <h3>Desarrollo de Software a Medida</h3>
+                        <p>Construcción de plataformas empresariales desde cero. Nos enfocamos en la arquitectura del sistema para garantizar que su software crezca al ritmo de su negocio.</p>
+                    </div>
+                </div>
+                <div class="service-row">
+                    <div class="service-icon">02</div>
+                    <div class="service-content">
+                        <h3>Implementación ERP & Odoo</h3>
+                        <p>Centralice la gestión de su empresa. Integramos y personalizamos módulos de Odoo para automatizar inventarios, facturación y CRM, eliminando la duplicidad de tareas manuales.</p>
+                    </div>
+                </div>
+                <div class="service-row">
+                    <div class="service-icon">03</div>
+                    <div class="service-content">
+                        <h3>Infraestructura & Cloud</h3>
+                        <p>No solo escribimos código, lo mantenemos vivo. Configuramos servidores seguros, pipelines de despliegue continuo (CI/CD) y arquitecturas serverless para máxima disponibilidad.</p>
+                    </div>
+                </div>
+                <div class="service-row">
+                    <div class="service-icon">04</div>
+                    <div class="service-content">
+                        <h3>Mantenimiento & Soporte Técnico</h3>
+                        <p>Soporte integral para su infraestructura física y lógica. Realizamos diagnóstico, reparación y optimización de hardware (equipos/servidores) y mantenimiento preventivo de software para asegurar la continuidad operativa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PRODUCTOS -->
+        <section id="products" class="page-view">
+            <div class="products-intro">
+                <h2>Catálogo de Soluciones</h2>
+                <p>Frameworks y módulos desarrollados in-house para acelerar la implementación en tu empresa.</p>
+            </div>
+
+            <!--<div class="finished-products-grid">
+                <div class="product-card">
+                    <span class="product-tag">ERP / RETAIL</span>
+                    <h3>Gioyis Inventory Core</h3>
+                    <p>Sistema modular para gestión de inventarios multialmacén. Sincronización en tiempo real con puntos de venta y reportes predictivos de stock.</p>
+                    <a href="#contact" class="btn-outline btn" onclick="showPage('contact')">Solicitar Demo</a>
+                </div>
+                <div class="product-card">
+                    <span class="product-tag">FINTECH / API</span>
+                    <h3>SecureGate Middleware</h3>
+                    <p>Pasarela de integración segura para transacciones financieras. Conecta sistemas legados bancarios con aplicaciones modernas vía API REST/GraphQL.</p>
+                    <a href="#contact" class="btn-outline btn" onclick="showPage('contact')">Ver Documentación</a>
+                </div>
+                <div class="product-card">
+                    <span class="product-tag">LOGÍSTICA</span>
+                    <h3>FleetTrack Dashboard</h3>
+                    <p>Panel de control para flotillas de transporte. Monitoreo de rutas, consumo de combustible y mantenimiento preventivo en una sola interfaz.</p>
+                    <a href="#contact" class="btn-outline btn" onclick="showPage('contact')">Más Información</a>
+                </div>
+            </div>-->
+
+            <div class="divider"></div>
+
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h3>Laboratorio de Innovación</h3>
+                <p>Próximos lanzamientos en fase beta.</p>
+            </div>
+
+            <div class="coming-soon-card">
+                <div class="lock-icon">🔒</div>
+                <h3>Gioyis Health Ecosystem</h3>
+                <p style="max-width: 500px; margin: 1rem auto;">
+                    Estamos desarrollando una plataforma integral para la gestión sanitaria moderna. Una solución SaaS enfocada en la seguridad del dato y la eficiencia operativa clínica.
+                </p>
+                <div class="hero-badge" style="background-color: var(--bg-body); border: 1px solid var(--primary);">
+                    PRÓXIMAMENTE - 2026
+                </div>
+                <div class="blur-text">
+                    <p>Lorem ipsum dolor sit amet features include patient tracking</p>
+                    <p>Automatic billing integration and secure history</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: ESTUDIO (NOSOTROS) -->
+        <section id="about" class="page-view">
+            <div class="about-grid">
+                <div>
+                    <h2>Socios Tecnológicos.</h2>
+                    <p>
+                        Gioyis es un estudio de desarrollo digital fundado con una premisa clara: <strong>calidad sobre cantidad</strong>. No somos una fábrica de software masiva; somos artesanos digitales.
+                    </p>
+                    <p>
+                        Nos especializamos en resolver problemas técnicos complejos para empresas que buscan soluciones a medida, no parches temporales. Al trabajar con nosotros, obtienes la dedicación total de un equipo enfocado, ágil y altamente técnico.
+                    </p>
+                    <p>
+                        Además, entendemos que el software vive en el mundo físico. Por eso, ofrecemos soporte integral para garantizar que tanto tu código como tu hardware operen en perfecta sincronía.
+                    </p>
+                </div>
+                <div>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Dedicación al Cliente</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">Agile</span>
+                        <span class="stat-label">Metodología de Trabajo</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-tertiary); margin-top: 2rem;">
+                        "Nuestra misión es construir sistemas invisibles: tan eficientes y estables que usted olvide que están ahí, mientras impulsan su negocio."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contact" class="page-view">
+            <div class="contact-layout">
+                <div>
+                    <h2>Inicie la Conversación</h2>
+                    <p>Estamos listos para analizar su caso de negocio. La confidencialidad es nuestra prioridad.</p>
+                    
+                    <div style="margin-top: 3rem;">
+                        <div class="contact-info-item">
+                            <span class="contact-label">CORREO ELECTRÓNICO</span>
+                            <span class="contact-value">contacto@gioyis.pro</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-label">UBICACIÓN</span>
+                            <span class="contact-value">Disponible para clientes globales (Remoto)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+                    <div>
+                        <input type="text" name="name" placeholder="Nombre completo o Empresa" required>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Correo corporativo" required>
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Describa brevemente sus necesidades técnicas..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitud</button>
+                </form>
+            </div>
+        </section>
 
     </main>
 
-    <script>
-        // 1. Encontrar el elemento que queremos rellenar
-        const loginSpan = document.querySelector('.terminal-login');
+    <footer id="main-footer">
+        <div class="container">
+            &copy; 2025 Gioyis. Todos los derechos reservados.
+        </div>
+    </footer>
 
-        // 2. Obtener la fecha y hora actual
-        const now = new Date();
-
-        // 3. Nombres para formatear la fecha
-        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        
-        // 4. Extraer cada parte
-        const dayName = days[now.getDay()];
-        const monthName = months[now.getMonth()];
-        const dayNum = now.getDate(); // Da el número, ej: 6
-        const year = now.getFullYear();
-        
-        // Formatea la hora como "21:53:00" (formato 24h)
-        const time = now.toLocaleTimeString('en-US', { 
-            hour12: false, 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            second: '2-digit' 
-        });
-
-        // 5. Construir el texto final
-        const loginString = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys001`;
-
-        // 6. Poner el texto en la página
-        loginSpan.textContent = loginString;
-    </script>
-
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>

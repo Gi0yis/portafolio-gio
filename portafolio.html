@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mí :: Portafolio</title>
+    <title>Portafolio :: Giovanni López</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/O.png" type="image/png" sizes="32x32">
     
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -25,24 +27,40 @@
         </div>
         
         <nav class="terminal-nav">
-            <a href="index.html">[ Inicio ]</a>
-            <a href="about.html">[ Sobre mí ]</a>
-            <a href="projects.html">[ Proyectos ]</a>
-            <a href="certificates.html">[ Certificados ]</a>
-            <a href="contact.html">[ Contacto ]</a> </nav>
+            <a href="portafolio.html">[ Inicio ]</a>
+            <a href="v2/about.html">[ Sobre mí ]</a>
+            <a href="v2/projects.html">[ Proyectos ]</a>
+            <a href="v2/certificates.html">[ Certificados ]</a>
+            <a href="v2/contact.html">[ Contacto ]</a> </nav>
 
         <div class="terminal-prompt">
             <span class="prompt-symbol">&gt;</span>
-            <span class="prompt-command">cat /bio/sobre-mi.txt</span>
+            <span class="prompt-command">./run-welcome.sh</span>
         </div>
         
         <div class="terminal-box">
-            <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
-            <p class="presentacion__contenido__texto">Desarrollador backend apasionado por la ciencia de datos y la inteligencia artificial.</p>
-            <p class="presentacion__contenido__texto">Mi trayectoria profesional se ha caracterizado por la participación activa en proyectos que exploran el potencial de los servicios de Azure y la aplicación de la inteligencia artificial para resolver problemas complejos. He trabajado en la implementación de soluciones que integran APIs de búsqueda avanzadas, análisis de texto sofisticado y modelos de lenguaje de última generación, todo dentro de entornos de desarrollo basados en la nube. Esta experiencia se ha consolidado en entornos de desafío e innovación, tales como los Hackathones organizados por Microsoft.</p>
-            <p class="presentacion__contenido__texto">Más allá del desarrollo de software, me apasiona la enseñanza y he tenido la oportunidad de formar a más de 100 estudiantes en diversas instituciones educativas. He diseñado planes de estudio adaptados a diferentes niveles, abarcando desde los fundamentos de la programación hasta lenguajes como Python, Java, JavaScript y C. Además, he fomentado la exploración de la inteligencia artificial y el desarrollo web a través de proyectos prácticos.</p>
-            <p class="presentacion__contenido__texto">Mi interés radica en la investigación y aplicación de la inteligencia artificial en diversos campos, especialmente en la automatización de procesos y el análisis de datos.</p>
-            <p class="presentacion__contenido__texto">Si desea obtener más información sobre mi trabajo o explorar oportunidades de colaboración en proyectos, no dude en contactarme.</p>
+            <h1 class="presentacion__contenido__titulo">
+                ¿Tienes una idea genial? <strong class="titulo-destaque">¡Hagamos que cobre vida!</strong>
+            </h1>
+            <p class="presentacion__contenido__texto">
+                ¡Hola! Soy Giovanni López, desarrollador Back-End. Ayudo a pequeños negocios y diseñadores a llevar a cabo buenas ideas. ¿Hablamos?
+            </p>
+        </div>
+
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="prompt-command">ls -l ./links</span>
+        </div>
+
+        <div class="terminal-box">
+            <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes:</h2>
+            <ul class="terminal-links">
+                <li><a href="https://github.com/Gi0yis">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/gi0yis/">LinkedIn</a></li>
+                <li><a href="https://giotechnoo.blogspot.com/">Blog</a></li>
+                <li><a href="https://www.instagram.com/gio_yis?igsh=MTc0NzN3N3lsYjVjNw==">Instagram</a></li>
+                <li><a href="https://x.com/Gioyis004?t=0HnqESqpmXsoUG4n-YU-mw&s=09">Twitter/X</a></li>
+            </ul>
         </div>
         
         <div class="terminal-output terminal-footer">
@@ -82,7 +100,7 @@
         });
 
         // 5. Construir el texto final
-        const loginString = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys002`;
+        const loginString = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys001`;
 
         // 6. Poner el texto en la página
         loginSpan.textContent = loginString;

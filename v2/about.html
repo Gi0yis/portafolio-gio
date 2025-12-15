@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí :: Portafolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../img/O.png" type="image/png" sizes="32x32">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <main class="terminal-body">
+        
+        <div class="terminal-line">
+            <span class="terminal-login"></span> </div>
+        </div>
+
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="prompt-command">cat navigation.txt</span>
+        </div>
+        
+        <nav class="terminal-nav">
+            <a href="../portafolio.html">[ Inicio ]</a>
+            <a href="about.html">[ Sobre mí ]</a>
+            <a href="projects.html">[ Proyectos ]</a>
+            <a href="certificates.html">[ Certificados ]</a>
+            <a href="contact.html">[ Contacto ]</a> </nav>
+
+        <div class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="prompt-command">cat /bio/sobre-mi.txt</span>
+        </div>
+        
+        <div class="terminal-box">
+            <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
+            <p class="presentacion__contenido__texto">Desarrollador backend apasionado por la ciencia de datos y la inteligencia artificial.</p>
+            <p class="presentacion__contenido__texto">Mi trayectoria profesional se ha caracterizado por la participación activa en proyectos que exploran el potencial de los servicios de Azure y la aplicación de la inteligencia artificial para resolver problemas complejos. He trabajado en la implementación de soluciones que integran APIs de búsqueda avanzadas, análisis de texto sofisticado y modelos de lenguaje de última generación, todo dentro de entornos de desarrollo basados en la nube. Esta experiencia se ha consolidado en entornos de desafío e innovación, tales como los Hackathones organizados por Microsoft.</p>
+            <p class="presentacion__contenido__texto">Más allá del desarrollo de software, me apasiona la enseñanza y he tenido la oportunidad de formar a más de 100 estudiantes en diversas instituciones educativas. He diseñado planes de estudio adaptados a diferentes niveles, abarcando desde los fundamentos de la programación hasta lenguajes como Python, Java, JavaScript y C. Además, he fomentado la exploración de la inteligencia artificial y el desarrollo web a través de proyectos prácticos.</p>
+            <p class="presentacion__contenido__texto">Mi interés radica en la investigación y aplicación de la inteligencia artificial en diversos campos, especialmente en la automatización de procesos y el análisis de datos.</p>
+            <p class="presentacion__contenido__texto">Si desea obtener más información sobre mi trabajo o explorar oportunidades de colaboración en proyectos, no dude en contactarme.</p>
+        </div>
+        
+        <div class="terminal-output terminal-footer">
+            <p>(c) 2025 Giovanni López. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="terminal-prompt terminal-prompt--final">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="cursor">_</span>
+        </div>
+
+    </main>
+
+    <script>
+        // 1. Encontrar el elemento que queremos rellenar
+        const loginSpan = document.querySelector('.terminal-login');
+
+        // 2. Obtener la fecha y hora actual
+        const now = new Date();
+
+        // 3. Nombres para formatear la fecha
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        
+        // 4. Extraer cada parte
+        const dayName = days[now.getDay()];
+        const monthName = months[now.getMonth()];
+        const dayNum = now.getDate(); // Da el número, ej: 6
+        const year = now.getFullYear();
+        
+        // Formatea la hora como "21:53:00" (formato 24h)
+        const time = now.toLocaleTimeString('en-US', { 
+            hour12: false, 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit' 
+        });
+
+        // 5. Construir el texto final
+        const loginString = `Last login: ${dayName} ${monthName} ${dayNum} ${time} ${year} on ttys002`;
+
+        // 6. Poner el texto en la página
+        loginSpan.textContent = loginString;
+    </script>
+
+</body>
+</html>
