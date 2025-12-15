@@ -374,7 +374,7 @@ footer {
     h1 { font-size: 2.5rem; } h2 { font-size: 2rem; }
     .hero-layout, .about-grid, .contact-layout, .why-us-grid, .service-row { grid-template-columns: 1fr; gap: 3rem; }
     .service-row { padding: 2rem; }
-    .tech-grid { grid-template-columns: repeat(1, 1fr); }
+    .tech-grid { grid-template-columns: repeat(1, 1fr); gap: 0.5rem; }
     .finished-products-grid { grid-template-columns: 1fr; }
     #home { padding-top: 2rem; }
     .page-view { padding: 2rem 1rem; width: 100%; } /* En móvil usamos todo el ancho */
