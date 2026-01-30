@@ -211,16 +211,16 @@
 
             <div class="coming-soon-card">
                 <div class="lock-icon">🔒</div>
-                <h3>Gioyis Health Ecosystem</h3>
+                <!--<h3>Gioyis Health Ecosystem</h3>
                 <p style="max-width: 500px; margin: 1rem auto;">
                     Estamos desarrollando una plataforma integral para la gestión sanitaria moderna. Una solución SaaS enfocada en la seguridad del dato y la eficiencia operativa clínica.
-                </p>
+                </p>-->
                 <div class="hero-badge" style="background-color: var(--bg-body); border: 1px solid var(--primary);">
                     PRÓXIMAMENTE - 2026
                 </div>
                 <div class="blur-text">
-                    <p>Lorem ipsum dolor sit amet features include patient tracking</p>
-                    <p>Automatic billing integration and secure history</p>
+                    <!--<p>Lorem ipsum dolor sit amet features include patient tracking</p>
+                    <p>Automatic billing integration and secure history</p>-->
                 </div>
             </div>
         </section>
@@ -294,9 +294,13 @@
 
     <footer id="main-footer">
         <div class="container">
-            &copy; 2025 Gioyis. Todos los derechos reservados.
+            &copy; <span id="year">2025</span> Gioyis. Todos los derechos reservados.
         </div>
     </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
